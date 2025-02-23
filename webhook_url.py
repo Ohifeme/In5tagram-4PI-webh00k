@@ -19,7 +19,7 @@ def callback_handler():
 
         if hub_token == VERIFY_TOKEN and hub_mode=='subscribe':
             print(f"Verification successful! Returning hub.challenge: {hub_challenge}")
-            return hub_challenge  
+            return hub_challenge    #returns the string back to Meta's server
         else:
             print("ts failed ngl")
             return "Verification failed", 403  # 403 error code
